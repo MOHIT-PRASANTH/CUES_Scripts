@@ -207,10 +207,9 @@ public class ClientSyncFromSheets {
 				catch (Exception e) {
 					System.out.println("Exception while retrieving version for client: "+client.getClientid());
 					failedClientsForWrongPnrs.put(client.getClientid()+" "+client.getName(),client.getPnr());
-					insertClientConfig(client);
 				}
+				insertClientConfig(client);
 			}
-			
 			System.out.println("Client ["+excelReader.getCurrentRowNumber()+"]: "+client.toString());
 		}
 		
