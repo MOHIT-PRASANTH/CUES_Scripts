@@ -183,7 +183,7 @@ public class ClientSyncFromSheets {
 		
 		while(excelReader.hasNext()) {
 			CorporateClient client = excelReader.getNextClient();
-			if (StringUtils.isBlank(client.getClientid()) || StringUtils.isBlank(client.getPcc()) || StringUtils.isBlank(client.getPcc())) {
+			if (StringUtils.isBlank(client.getClientid()) || StringUtils.isBlank(client.getPcc()) || StringUtils.isBlank(client.getPnr())) {
 				failedClients.add(client.getClientid());
 				if(StringUtils.isBlank(client.getPnr())) {
 					insertClientConfig(client);
